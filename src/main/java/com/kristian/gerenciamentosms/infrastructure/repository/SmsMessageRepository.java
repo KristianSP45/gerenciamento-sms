@@ -3,11 +3,13 @@ package com.kristian.gerenciamentosms.infrastructure.repository;
 import com.kristian.gerenciamentosms.infrastructure.entity.SmsMessage;
 import com.kristian.gerenciamentosms.infrastructure.enums.StatusEnvioEnum;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
+@Repository
 public interface SmsMessageRepository extends CrudRepository<SmsMessage, Long> {
     SmsMessage save(SmsMessage smsMessage);
 
